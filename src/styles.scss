@@ -19,6 +19,8 @@ body {
 }
 
 .example {
+  color: black;
+
   &__header {
     font-size: 2rem;
 
@@ -31,8 +33,6 @@ body {
     background: white;
 
     border-radius: 1rem;
-
-    color: black;
   }
 
   &__form {
