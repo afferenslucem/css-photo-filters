@@ -7,6 +7,23 @@
 <body>
 <div class="tape">
     <div class="example">
+        <div class="example__description">
+            <div class="style">
+                <h3 class="style__element">.mask</h3>
+                <div class="style__line style-line">
+                    <span class="style-line__property">mix-blend-mode:</span>
+                    <span class="style-line__value">multiply</span>
+                </div>
+            </div>
+
+            <div class="style">
+                <h3 class="style__element">.effect</h3>
+                <div class="style__line style-line">
+                    <span class="style-line__property">mix-blend-mode:</span>
+                    <span class="style-line__value">color-dodge</span>
+                </div>
+            </div>
+        </div>
         <form class="example__form">
             <div class="check-line">
                 <input class="check-line__input" type="checkbox" name="image" checked>
@@ -21,7 +38,7 @@
                 <label class="check-line__label">Effect</label>
             </div>
         </form>
-        <div class="shader sunset">
+        <div class="example__result shader sunset">
             <img class="shader-image" src="/assets/sunset/photo.jpg">
             <div class="shader-effect layer sunset-layer sunset-effect">
                 <div class="shader-mask layer sunset-layer sunset-mask"></div>

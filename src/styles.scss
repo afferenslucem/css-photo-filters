@@ -1,5 +1,6 @@
 :root {
   --bg-color: #07252d;
+  font-family: Arial;
 }
 
 * {
@@ -13,16 +14,45 @@ body {
   background-color: var(--bg-color);
 }
 
-.example__form {
-  padding: 1rem;
+.example {
+  &__description {
+    padding: 1rem;
 
-  width: 100%;
+    background: white;
 
-  border-radius: 1rem;
+    border-radius: 1rem;
+  }
 
-  background-color: white;
+  &__form {
+    padding: 1rem;
 
-  margin-bottom: 1rem;
+    width: 100%;
+
+    border-radius: 1rem;
+
+    background-color: white;
+
+    margin-bottom: 1rem;
+  }
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.style {
+  &__element {
+    margin-bottom: 0.5rem;
+  }
+
+  &__line {
+    padding-left: 1rem;
+    font-family: Consolas;
+  }
+
+  & + & {
+    margin-top: 1.5rem;
+  }
 }
 
 .check-line {
