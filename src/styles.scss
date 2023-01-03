@@ -13,7 +13,9 @@ body {
   min-height: 100vh;
   background-color: var(--bg-color);
 
-  padding-bottom: 50rem;
+  padding-bottom: 5rem;
+
+  color: white;
 }
 
 .example {
@@ -29,6 +31,8 @@ body {
     background: white;
 
     border-radius: 1rem;
+
+    color: black;
   }
 
   &__form {
@@ -99,19 +103,20 @@ body {
   margin: 0 auto;
 
   width: 700px;
-  height: 300vh;
 
   img {
     width: 100%;
   }
-
-  padding-bottom: 10rem;
 }
 
 .shader {
   position: relative;
   backface-visibility: hidden;
   overflow: hidden;
+
+  &-mask, &-effect {
+    backface-visibility: hidden;
+  }
 }
 
 .layer {
@@ -176,5 +181,29 @@ body {
     background-attachment: fixed;
     background-size: 100% 80%;
     background-image: linear-gradient(179deg, #000 40%, red, orange, #fff 60%, #000 80%);
+  }
+}
+
+.hologram {
+  &-layer {
+    height: 467px;
+    width: 100%;
+  }
+
+  &-mask {
+    mix-blend-mode: multiply;
+    background-color: black;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-image: url('./assets/hologram/mask.png');
+  }
+
+  &-effect {
+    mix-blend-mode: color-dodge;
+    background-color: black;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(125deg, #f09 30%, #fc8b00, #ff0, #00ff8a, #00cfff, #cc4cfa 70%);
   }
 }
